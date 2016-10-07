@@ -18,3 +18,16 @@ Build and fire it up daemonized, and you should be off and running.  Check the
 logs for your container a few minutes after you start it to make sure your
 settings are sane.  Logstash is pretty good about making eloquent complaints
 when it's unhappy.
+
+Here's how you run it, once your environment vars are set:
+
+        docker run -d -p 5000:5000 \
+        -e ES_HOSTNAME=$ES_HOSTNAME \
+        -e GRAPHITE_HOST=$GRAPHITE_HOST \
+        -e GRAPHITE_PORT=$GRAPHITE_PORT \
+        -e SLACK_WEBHOOK=$SLACK_WEBHOOK \
+        -e SLACK_USERNAME=$SLACK_USERNAME \
+        -e SLACK_ICON=$SLACK_ICON \
+        -e VAULT_URL=$VAULT_URL \
+        -e VAULT_TOKEN-$VAULT_TOKEN  \
+        sitch/logstash
