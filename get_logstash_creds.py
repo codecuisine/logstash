@@ -9,6 +9,8 @@ keys_and_files = {"crt": "/etc/logstash.crt",
                   "key": "/etc/logstash.key"}
 
 
+for var in [vault_url, vault_token, vault_path]:
+    print "VAR IS: %s" % var
 client = hvac.Client(url=vault_url, token=vault_token)
 response = client.read(vault_path)
 print response
