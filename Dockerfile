@@ -11,4 +11,6 @@ RUN apt-get update && \
 
 RUN pip install hvac
 
+EXPOSE 5001:5001
+
 CMD /app/bootstrapper.sh
