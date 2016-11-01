@@ -1,8 +1,9 @@
-FROM logstash
+FROM logstash:2.3.4-1
 
 COPY ./ /app/
 
-RUN cat /app/ls-plugins | xargs /usr/share/logstash/bin/logstash-plugin install
+
+RUN cat /app/ls-plugins | xargs /opt/logstash/bin/logstash-plugin install
 
 RUN apt-get update && \
     apt-get install -y \
