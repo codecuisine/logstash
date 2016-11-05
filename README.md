@@ -5,7 +5,7 @@ Needs these env vars:
 
 | var            | purpose                       |
 |----------------|-------------------------------|
-| ES_HOSTNAME    | Elasticsearch hostname  or IP |
+| ES_URL         | Elasticsearch URL             |
 | GRAPHITE_HOST  | Graphite hostname or IP       |
 | GRAPHITE_PORT  | Graphite port                 |
 | SLACK_WEBHOOK  | Webhook for posting to Slack  |
@@ -21,8 +21,10 @@ when it's unhappy.
 
 Here's how you run it, once your environment vars are set:
 
-        docker run -d -p 5000:5000 \
-        -e ES_HOSTNAME=$ES_HOSTNAME \
+        docker run -d \
+        -p 5000:5000 \
+        -p 5001:5001 \
+        -e ES_URL=$ES_URL \
         -e GRAPHITE_HOST=$GRAPHITE_HOST \
         -e GRAPHITE_PORT=$GRAPHITE_PORT \
         -e SLACK_WEBHOOK=$SLACK_WEBHOOK \
