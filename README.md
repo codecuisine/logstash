@@ -32,4 +32,5 @@ Here's how you run it, once your environment vars are set:
         -e SLACK_ICON=$SLACK_ICON \
         -e VAULT_URL=$VAULT_URL \
         -e VAULT_TOKEN=$VAULT_TOKEN  \
+        --name sitch_logstash \
         sitch/logstash
