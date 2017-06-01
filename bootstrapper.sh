@@ -7,4 +7,4 @@
 cat /app/logstash-config.conf | envsubst > /etc/logstash-config.conf
 
 # Start Logstash
-/opt/logstash/bin/logstash -f /etc/logstash-config.conf > /dev/null 2>&1
+/opt/logstash/bin/logstash -f /etc/logstash-config.conf
