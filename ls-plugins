@@ -6,7 +6,6 @@ logstash-codec-json_lines
 logstash-codec-line
 logstash-codec-msgpack
 logstash-codec-multiline
-logstash-codec-oldlogstashjson
 logstash-codec-rubydebug
 logstash-filter-anonymize
 logstash-filter-checksum
