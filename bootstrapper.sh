@@ -7,7 +7,10 @@
 cat /app/logstash-config.conf | envsubst > /etc/logstash-config.conf
 
 # Config timestamp
-/usr/share/logstash/bin/logstash -e config.test_and_exit -f /etc/logstash-config.conf
+# /usr/share/logstash/bin/logstash -e config.test_and_exit -f /etc/logstash-config.conf
+/opt/logstash/bin/logstash -t -f /etc/logstash-config.conf
 
 # Start Logstash
-/usr/share/logstash/bin/logstash -f /etc/logstash-config.conf > /dev/null 2>&1
+# /usr/share/logstash/bin/logstash -f /etc/logstash-config.conf > /dev/null 2>&1
+
+/opt/logstash/bin/logstash -f /etc/logstash-config.conf > /dev/null 2>&1
