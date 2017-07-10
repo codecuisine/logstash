@@ -6,5 +6,8 @@
 # Transform and place the Logatash config
 cat /app/logstash-config.conf | envsubst > /etc/logstash-config.conf
 
+# Config timestamp
+/usr/share/logstash/bin/logstash -e config.test_and_exit -f /etc/logstash-config.conf
+
 # Start Logstash
 /usr/share/logstash/bin/logstash -f /etc/logstash-config.conf > /dev/null 2>&1
