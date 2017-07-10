@@ -7,9 +7,14 @@ COPY ./ /app/
 
 RUN cat /app/ls-plugins | xargs logstash-plugin install
 
-RUN apk add -U \
-    gettext \
-    py-pip
+# RUN apk add -U \
+#    gettext \
+#    py-pip
+
+RUN apt-get update && \
+    apt-get install -y \
+    gettext-base \
+    python-pip
 
 RUN pip install hvac
 
