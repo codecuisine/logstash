@@ -1,6 +1,6 @@
 # FROM logstash:5.4.3-alpine
 
-FROM logstash:2.4.1-alpine
+FROM logstash:2.3.4-1
 
 COPY ./ /app/
 
