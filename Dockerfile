@@ -1,20 +1,13 @@
-# FROM logstash:5.4.3-alpine
-
-FROM logstash:2.3.4-1
+FROM logstash:5.4.3-alpine
 
 COPY ./ /app/
 
 
 RUN cat /app/ls-plugins | xargs logstash-plugin install
 
-# RUN apk add -U \
-#    gettext \
-#    py-pip
-
-RUN apt-get update && \
-    apt-get install -y \
-    gettext-base \
-    python-pip
+RUN apk add -U \
+    gettext \
+    py-pip
 
 RUN pip install hvac
 
