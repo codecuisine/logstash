@@ -5,9 +5,9 @@ import os
 vault_url = os.getenv("VAULT_URL")
 vault_token = os.getenv("VAULT_TOKEN")
 vault_path = "secret/server"
-keys_and_files = {"crt": "/etc/logstash.crt",
-                  "key": "/etc/logstash.key",
-                  "ca": "/etc/logstash_ca.crt"}
+keys_and_files = {"crt": "/app/logstash.crt",
+                  "key": "/app/logstash.key",
+                  "ca": "/app/logstash_ca.crt"}
 
 
 for var in [vault_url, vault_token, vault_path]:
