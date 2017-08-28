@@ -4,7 +4,7 @@
 /usr/bin/python /app/get_logstash_creds.py
 
 # Config test
-/usr/share/logstash/bin/logstash -t -f /app/logstash-config.conf ||  exit 1 \
+/usr/share/logstash/bin/logstash -t -f /app/logstash-config.conf || exit 1
 cp /app/logstash-config.conf /etc/logstash-config.conf
 
 
