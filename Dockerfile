@@ -18,6 +18,8 @@ RUN pip install hvac
 
 EXPOSE 5001:5001
 
+RUN chown -R logstash /app
+
 USER logstash
 
 CMD /app/bootstrapper.sh
