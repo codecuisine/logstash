@@ -5,8 +5,7 @@
 
 # Config test
 /usr/share/logstash/bin/logstash -t -f /app/logstash-config.conf || exit 1
-cp /app/logstash-config.conf /etc/logstash-config.conf
 
 
 # Start Logstash
-/usr/share/logstash/bin/logstash -f /etc/logstash-config.conf
+/usr/share/logstash/bin/logstash -f /app/logstash-config.conf
