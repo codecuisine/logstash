@@ -1,4 +1,4 @@
-FROM logstash:5.4.3-alpine
+FROM docker.elastic.co/logstash/logstash:5.5.2-alpine
 
 COPY ./ /app/
 
