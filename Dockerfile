@@ -5,9 +5,6 @@ COPY ./ /app/
 
 RUN cat /app/ls-plugins | xargs logstash-plugin install
 
-# RUN apk add -U \
-#    gettext \
-#    py-pip
 USER root
 
 RUN yum -y install epel-release && \
@@ -22,4 +19,5 @@ RUN chown -R logstash /app
 
 USER logstash
 
-CMD /app/bootstrapper.sh
+ENTRYPOINT "/app/entrypoint.sh"
+CMD ""

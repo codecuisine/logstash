@@ -34,3 +34,20 @@ Here's how you run it, once your environment vars are set:
         -e VAULT_TOKEN=$VAULT_TOKEN  \
         --name sitch_logstash \
         sitch/logstash
+
+### Running with verbose output
+
+        docker run -d \
+        -p 5000:5000 \
+        -p 5001:5001 \
+        -e ES_URL=$ES_URL \
+        -e GRAPHITE_HOST=$GRAPHITE_HOST \
+        -e GRAPHITE_PORT=$GRAPHITE_PORT \
+        -e SLACK_WEBHOOK=$SLACK_WEBHOOK \
+        -e SLACK_USERNAME=$SLACK_USERNAME \
+        -e SLACK_ICON=$SLACK_ICON \
+        -e VAULT_URL=$VAULT_URL \
+        -e VAULT_TOKEN=$VAULT_TOKEN  \
+        --name sitch_logstash \
+        sitch/logstash \
+        debug
