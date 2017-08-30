@@ -8,7 +8,7 @@ RUN cat /app/ls-plugins | xargs logstash-plugin install
 USER root
 
 RUN yum -y install epel-release && \
-    yum -y install python-pip && \
+    yum -y install python-pip vim && \
     yum clean all
 
 RUN pip install hvac

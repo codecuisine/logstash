@@ -5,6 +5,6 @@ logstash-filter-json
 logstash-filter-mutate
 logstash-input-beats
 logstash-output-elasticsearch
-logstash-output-graphite
+logstash-output-influxdb
 logstash-output-slack
 logstash-patterns-core

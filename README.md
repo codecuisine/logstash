@@ -6,8 +6,8 @@ Needs these env vars:
 | var            | purpose                       |
 |----------------|-------------------------------|
 | ES_URL         | Elasticsearch URL             |
-| GRAPHITE_HOST  | Graphite hostname or IP       |
-| GRAPHITE_PORT  | Graphite port                 |
+| INFLUXDB_HOST  | InfluxDB hostname or IP       |
+| INFLUXDB_PORT  | InfluxDB port                 |
 | SLACK_WEBHOOK  | Webhook for posting to Slack  |
 | SLACK_USERNAME | Username for Slack messages   |
 | SLACK_ICON     | Icon for Slack messages       |
@@ -25,8 +25,8 @@ Here's how you run it, once your environment vars are set:
         -p 5000:5000 \
         -p 5001:5001 \
         -e ES_URL=$ES_URL \
-        -e GRAPHITE_HOST=$GRAPHITE_HOST \
-        -e GRAPHITE_PORT=$GRAPHITE_PORT \
+        -e INFLUXDB_HOST=$INFLUXDB_HOST \
+        -e INFLUXDB_PORT=$INFLUXDB_PORT \
         -e SLACK_WEBHOOK=$SLACK_WEBHOOK \
         -e SLACK_USERNAME=$SLACK_USERNAME \
         -e SLACK_ICON=$SLACK_ICON \
@@ -41,8 +41,8 @@ Here's how you run it, once your environment vars are set:
         -p 5000:5000 \
         -p 5001:5001 \
         -e ES_URL=$ES_URL \
-        -e GRAPHITE_HOST=$GRAPHITE_HOST \
-        -e GRAPHITE_PORT=$GRAPHITE_PORT \
+        -e INFLUXDB_HOST=$INFLUXDB_HOST \
+        -e INFLUXDB_PORT=$INFLUXDB_PORT \
         -e SLACK_WEBHOOK=$SLACK_WEBHOOK \
         -e SLACK_USERNAME=$SLACK_USERNAME \
         -e SLACK_ICON=$SLACK_ICON \
