@@ -19,7 +19,7 @@ RUN chown -R logstash /app
 
 USER logstash
 
-# RUN /usr/share/logstash/bin/logstash -t -f /app/logstash-config.con
+# RUN /usr/share/logstash/bin/logstash -t -f /app/logstash-config.conf
 
 ENTRYPOINT "/app/entrypoint.sh"
 CMD ""
